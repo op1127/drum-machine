@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drum Machine</title>
+    <script type="text/javascript" src="node_modules/paper/dist/paper-full.js"></script>
+    <script type="text/javascript" src="node_modules/howler/dist/howler.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron:500,700" rel="stylesheet"> 
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/paperscript" canvas="myCanvas" src="index.js"></script>
+</head>
+
+<body>
+    <canvas id="myCanvas" resize></canvas>
+    <div class="machine">
+        <div class="machine__container">
+            <div class="machine__container--left">
+                <h1><span>Drum</span> Machine</h1>
+                <div class="grid">
+                    <div class="grid__item pad-1">1</div>
+                    <div class="grid__item pad-2">2</div>
+                    <div class="grid__item pad-3">3</div>
+                    <div class="grid__item pad-4">4</div>
+                    <div class="grid__item pad-q">q</div>
+                    <div class="grid__item pad-w">w</div>
+                    <div class="grid__item pad-e">e</div>
+                    <div class="grid__item pad-r">r</div>
+                    <div class="grid__item pad-a">a</div>
+                    <div class="grid__item pad-s">s</div>
+                    <div class="grid__item pad-d">d</div>
+                    <div class="grid__item pad-f">f</div>
+                    <div class="grid__item pad-z">z</div>
+                    <div class="grid__item pad-x">x</div>
+                    <div class="grid__item pad-c">c</div>
+                    <div class="grid__item pad-v">v</div>
+                </div>
+            </div>
+
+            <div class="machine__container--right">
+                <div class="screen">
+                    RNB Kit 1
+                </div>
+
+                <div class="transport">
+                    <div class="btn transport__play">Play</div>
+                    <div class="btn transport__stop">Stop</div>
+                    <div class="btn transport__loop">Loop</div>
+                    <div class="btn transport__previous">Previous</div>
+                    <div class="btn transport__next">Next</div>
+                </div>
+
+                <div class="instructions">
+                    
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

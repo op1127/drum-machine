@@ -1,0 +1,46 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    
+    @media only screen and (min-width: 120.5em) { 
+        font-size: 75%;
+     }
+
+     @media only screen and (max-width: 68.75em) {
+        font-size: 50%;
+    }
+
+     @media only screen and (max-width: 56.25em) {
+        font-size: 40%;
+    }
+}
+
+canvas {
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff;
+    position: fixed;
+    justify-self: stretch;
+    align-self: stretch;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
