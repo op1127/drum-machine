@@ -66,7 +66,7 @@ var drumKits = [{
         },
         q: {
             pad: 'q',
-            color: '#29366f',
+            color: '#726da8',
             sound: new Howl({
                 src: ['sounds/rnb_kit/OS_RNB_Perc 13.wav'],
                 volume: 0.5
@@ -74,7 +74,7 @@ var drumKits = [{
         },
         w: {
             pad: 'w',
-            color: '#405bd0',
+            color: '#7d8cc4',
             sound: new Howl({
                 src: ['sounds/rnb_kit/OS_RNB_Perc 12.wav'],
                 volume: 0.5
@@ -82,7 +82,7 @@ var drumKits = [{
         },
         e: {
             pad: 'e',
-            color: '#4fa4f7',
+            color: '#a0d2db',
             sound: new Howl({
                 src: ['sounds/rnb_kit/OS_RNB_Perc 6.wav'],
                 volume: 0.5
@@ -90,7 +90,7 @@ var drumKits = [{
         },
         r: {
             pad: 'r',
-            color: '#86ecf8',
+            color: '#bee7e8',
             sound: new Howl({
                 src: ['sounds/rnb_kit/OS_RNB_Perc 15.wav'],
                 volume: 0.5
@@ -202,10 +202,24 @@ document.querySelector(".transport__previous").addEventListener("click", functio
 });
 
 // Event listener to be able to click each pad. Calls the triggerPad function below
-document.querySelector(".grid").addEventListener("click", function (event) {
+document.querySelector(".grid").addEventListener("mousedown", function (event) {
     if (event.target && event.target.matches("div.grid__item")) {
         var key = event.target.innerText.toLowerCase();
         triggerPad(key);
+    }
+});
+
+document.querySelector(".grid").addEventListener("mouseup", function (event) {
+    if (event.target && event.target.matches("div.grid__item")) {
+        var key = event.target.innerText.toLowerCase();
+        resetColor(key);
+    }
+});
+
+document.querySelector(".grid").addEventListener("mouseout", function (event) {
+    if (event.target && event.target.matches("div.grid__item")) {
+        var key = event.target.innerText.toLowerCase();
+        resetColor(key);
     }
 });
 
@@ -217,24 +231,43 @@ document.querySelector(".grid").addEventListener("touchstart", function (event) 
     }
 });
 
-function changeColor(event) {
-    var padClass = ".pad-" + event.pad;
-    var el = document.querySelector(padClass);
-    el.style.backgroundColor = event.color;
-    el.style.color = event.color;
-    el.style.transform = 'scale(.94)';
-    setTimeout(function (){
-        el.style.backgroundColor = 'rgb(238, 238, 238)'; 
-        el.style.color = 'rgb(110, 110, 110)'; 
-        el.style.transform = 'scale(1)';
-    }, 100);
-}
+document.querySelector(".grid").addEventListener("touchend", function (event) {
+    if (event.target && event.target.matches("div.grid__item")) {
+        var key = event.target.innerText.toLowerCase();
+        resetColor(key);
+        event.preventDefault();
+    }
+});
+
 
 // Event listener for each key press. Calls the triggerPad function below
 function onKeyDown(event) {
     if (drumKits[kitIndex][event.key]) {
         triggerPad(event.key);
     }
+}
+
+function onKeyUp(event) {
+    if (drumKits[kitIndex][event.key]) {
+        resetColor(drumKits[kitIndex][event.key].pad)
+    }
+}
+
+function changeColor(key, color) {
+    var padClass = ".pad-" + key;
+    var el = document.querySelector(padClass);
+    el.style.backgroundColor = color;
+    el.style.color = color;
+    el.style.transform = 'scale(.94)';
+    document.querySelector('.signature').style.color = color;
+}
+
+function resetColor(key) {
+    var padClass = ".pad-" + key;
+    var el = document.querySelector(padClass);
+    el.style.backgroundColor = 'rgb(238, 238, 238)'; 
+    el.style.color = 'rgb(110, 110, 110)'; 
+    el.style.transform = 'scale(1)';
 }
 
 // By using the integer value of kitIndex obove, we can access each kit by passing in kitIndex to the drumKits index array of objects. 
@@ -258,7 +291,7 @@ function triggerPad(event) {
     newShape.strokeColor = drumKits[kitIndex][event].color
     drumKits[kitIndex][event].sound.play();
     shapes.push(newShape);
-    changeColor(drumKits[kitIndex][event]);
+    changeColor(drumKits[kitIndex][event].pad, drumKits[kitIndex][event].color);
 }   
 
 function onFrame() {
