@@ -135,8 +135,9 @@ body {
       .machine__container--right .screen {
         width: 36.7rem;
         height: 10rem;
-        font-family: VT323, sans-serif;
-        font-size: 3rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 2rem;
+        text-transform: uppercase;
         border-left: 3rem solid #3b3b3b;
         border-right: 3rem solid #3b3b3b;
         border-top: 2rem solid #3b3b3b;
@@ -144,14 +145,21 @@ body {
         border-radius: 3px;
         background-color: #eeeeee;
         margin-top: 1rem;
+        padding: 0 2rem;
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center; }
+        .machine__container--right .screen img {
+          width: 2rem;
+          height: 2rem; }
         @media only screen and (max-width: 37.5em) {
           .machine__container--right .screen {
             width: 90vw;
             height: 14rem;
-            font-size: 5rem; } }
+            font-size: 5rem; }
+            .machine__container--right .screen img {
+              width: 5rem;
+              height: 5rem; } }
       .machine__container--right .instructions {
         width: 36.7rem;
         height: 25rem;
@@ -198,7 +206,7 @@ body {
         .machine__container--right .transport .btn {
           height: 3rem;
           font-family: 'Roboto', sans-serif;
-          font-size: 1.1rem;
+          font-size: 1.3rem;
           text-transform: uppercase;
           color: #6e6e6e;
           font-weight: 500;
@@ -217,3 +225,6 @@ body {
 
 .btn-loop {
   color: orangered !important; }
+
+.invisible {
+  visibility: hidden; }

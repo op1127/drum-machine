@@ -8,7 +8,6 @@
     <title>Drum Machine</title>
     <script type="text/javascript" src="node_modules/paper/dist/paper-full.js"></script>
     <script type="text/javascript" src="node_modules/howler/dist/howler.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Orbitron:500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet"> 
     <link rel="stylesheet" href="css/style.css">
@@ -44,15 +43,17 @@
 
             <div class="machine__container--right">
                 <div class="screen">
-                    RNB Kit 1
+                    <p>RNB</p> 
+                    <img id="loop" class="invisible" src="./img/loop arrow.svg"></img>
+                    <p>Volume: <span id="volume">10</span></p>  
                 </div>
 
                 <div class="transport">
                     <div class="btn transport__play">Play</div>
                     <div class="btn transport__stop">Stop</div>
                     <div class="btn transport__loop">Loop</div>
-                    <div class="btn transport__previous">Previous</div>
-                    <div class="btn transport__next">Next</div>
+                    <div class="btn transport__volume-down">Vol -</div>
+                    <div class="btn transport__volume-up">Vol +</div>
                 </div>
 
                 <div class="instructions">

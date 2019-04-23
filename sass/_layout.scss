@@ -121,8 +121,9 @@
             .screen {
                 width: 36.7rem;
                 height: 10rem;
-                font-family: VT323, sans-serif;
-                font-size: 3rem;
+                font-family: 'Roboto', sans-serif;
+                font-size: 2rem;
+                text-transform: uppercase;
 
                 border-left: 3rem solid rgb(59, 59, 59);
                 border-right: 3rem solid rgb(59, 59, 59);
@@ -131,15 +132,26 @@
                 border-radius: 3px;
                 background-color: rgb(238, 238, 238);
                 margin-top: 1rem;
+                padding: 0 2rem;
 
                 display: flex;
-                justify-content: center;
-                align-items: center;
+                justify-content: space-around;
+                align-items: center; 
+
+                img {
+                    width: 2rem;
+                    height: 2rem;
+                }
 
                 @media only screen and (max-width: 37.5em) {
                     width: 90vw;
                     height: 14rem;
                     font-size: 5rem;
+
+                    img {
+                        width: 5rem;
+                        height: 5rem;
+                    }
                 }
             }
 
@@ -209,7 +221,7 @@
                     height: 3rem;
 
                     font-family: 'Roboto', sans-serif;
-                    font-size: 1.1rem;
+                    font-size: 1.3rem;
                     text-transform: uppercase;
                     color: rgb(110, 110, 110);
                     font-weight: 500;
@@ -238,4 +250,8 @@
 
 .btn-loop {
     color: orangered !important;
+}
+
+.invisible {
+    visibility: hidden;
 }
