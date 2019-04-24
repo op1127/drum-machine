@@ -116,8 +116,8 @@ body {
           background-color: #eeeeee;
           border-radius: 3px;
           border: 3px solid #6e6e6e;
-          text-align: right;
-          padding-right: .5rem;
+          text-align: left;
+          padding-left: .5rem;
           cursor: pointer; }
           @media only screen and (max-width: 37.5em) {
             .machine__container--left .grid__item {
@@ -156,7 +156,7 @@ body {
           .machine__container--right .screen {
             width: 90vw;
             height: 14rem;
-            font-size: 5rem; }
+            font-size: 4.5rem; }
             .machine__container--right .screen img {
               width: 5rem;
               height: 5rem; } }
@@ -218,7 +218,7 @@ body {
           @media only screen and (max-width: 37.5em) {
             .machine__container--right .transport .btn {
               height: 8rem;
-              font-size: 1.6rem;
+              font-size: 3rem;
               padding-left: 1px; } }
         .machine__container--right .transport .btn:active {
           transform: scale(0.95); }

@@ -4,7 +4,7 @@ var drumKit = {
         color: '#1a1c2c',
         sound: new Howl({
             src: ['sounds/rnb_kit/OS_RNB_Kick 1.wav'],
-            volume: 0.5
+            volume: 0.3
         })
     },
     x: {
@@ -12,7 +12,7 @@ var drumKit = {
         color: '#572956',
         sound: new Howl({
             src: ['sounds/rnb_kit/OS_RNB_Snare 6.wav'],
-            volume: 0.5
+            volume: 0.3
         })
     },
     c: {
@@ -20,7 +20,7 @@ var drumKit = {
         color: '#b14156',
         sound: new Howl({
             src: ['sounds/rnb_kit/OS_RNB_Top 8.wav'],
-            volume: 0.5
+            volume: 0.2
         })
     },
     v: {
@@ -28,7 +28,7 @@ var drumKit = {
         color: '#ee7b58',
         sound: new Howl({
             src: ['sounds/rnb_kit/OS_RNB_Top 11.wav'],
-            volume: 0.5
+            volume: 0.3
         })
     },
     a: {
@@ -36,7 +36,7 @@ var drumKit = {
         color: '#ffd079',
         sound: new Howl({
             src: ['sounds/rnb_kit/OS_RNB_Kick 12.wav'],
-            volume: 0.5
+            volume: 0.3
         })
     },
     s: {
@@ -44,7 +44,7 @@ var drumKit = {
         color: '#a0f072',
         sound: new Howl({
             src: ['sounds/rnb_kit/OS_RNB_Snare 14.wav'],
-            volume: 0.5
+            volume: 0.3
         })
     },
     d: {
@@ -52,7 +52,7 @@ var drumKit = {
         color: '#38b86e',
         sound: new Howl({
             src: ['sounds/rnb_kit/OS_RNB_Top 9.wav'],
-            volume: 0.5
+            volume: 0.3
         })
     },
     f: {
@@ -60,7 +60,7 @@ var drumKit = {
         color: '#276e7b',
         sound: new Howl({
             src: ['sounds/rnb_kit/OS_RNB_Top 13.wav'],
-            volume: 0.5
+            volume: 0.3
         })
     },
     q: {
@@ -68,7 +68,7 @@ var drumKit = {
         color: '#726da8',
         sound: new Howl({
             src: ['sounds/rnb_kit/OS_RNB_Perc 13.wav'],
-            volume: 0.5
+            volume: 0.3
         })
     },
     w: {
@@ -76,7 +76,7 @@ var drumKit = {
         color: '#7d8cc4',
         sound: new Howl({
             src: ['sounds/rnb_kit/OS_RNB_Perc 12.wav'],
-            volume: 0.5
+            volume: 0.3
         })
     },
     e: {
@@ -84,7 +84,7 @@ var drumKit = {
         color: '#a0d2db',
         sound: new Howl({
             src: ['sounds/rnb_kit/OS_RNB_Perc 6.wav'],
-            volume: 0.5
+            volume: 0.3
         })
     },
     r: {
@@ -92,36 +92,36 @@ var drumKit = {
         color: '#bee7e8',
         sound: new Howl({
             src: ['sounds/rnb_kit/OS_RNB_Perc 15.wav'],
-            volume: 0.5
+            volume: 0.3
         })
     },
     1: {
         pad: '1',
-        color: '#c3acce',
+        color: '#f08700',
         sound: new Howl({
             src: ['sounds/rnb_kit/OS_RNB_125_Amin_Crazy Vocal 1.wav'],
-            volume: 0.7
+            volume: 0.3
         })
     },
     2: {
         pad: '2',
-        color: '#89909f',
+        color: '#f49f0a',
         sound: new Howl({
             src: ['sounds/rnb_kit/OS_RNB_125_Amin_Crazy Vocal 3.wav'],
-            volume: 0.7
+            volume: 0.3
         })
     },
     3: {
         pad: '3',
-        color: '#538083',
+        color: '#efca08',
         sound: new Howl({
             src: ['sounds/rnb_kit/OS_RNB_125_Amin_Crazy Vocal 5.wav'],
-            volume: 0.4
+            volume: 0.3
         })
     },
     4: {
         pad: '4',
-        color: '#2a7f62',
+        color: '#00a6a6',
         sound: new Howl({
             src: ['sounds/rnb_kit/OS_RNB_125_Amin_Crazy Vocal 6.wav'],
             volume: 1.0
@@ -132,7 +132,7 @@ var drumKit = {
 
 var song = {
     sound: new Howl({
-        src: ['sounds/songs/rnb_crazy.wav'],
+        src: ['sounds/songs/future-rnb.wav'],
         volume: 1.0,
         onend: function () {
             playback = false;
