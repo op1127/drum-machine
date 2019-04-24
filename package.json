@@ -16,8 +16,6 @@
   "author": "Omar Plasencia",
   "license": "ISC",
   "devDependencies": {
-    "howler": "^2.1.1",
-    "paper": "^0.12.0",
     "autoprefixer": "^9.4.10",
     "concat": "^1.0.3",
     "node-sass": "^4.11.0",
@@ -25,6 +23,8 @@
     "postcss-cli": "^6.1.2"
   },
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "howler": "^2.1.2",
+    "paper": "^0.12.0"
   }
 }
