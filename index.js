@@ -284,7 +284,6 @@ function triggerPad(event) {
     shapes.push(newShape);
     changeColor(drumKit[event].pad, drumKit[event].color);
 
-    console.log(event)
 }
 
 function onFrame() {
