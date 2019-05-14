@@ -41,23 +41,17 @@
                 order: 2;
             }
 
-            h1 {
-                font-family: Orbitron, sans-serif;
-                color: rgb(59, 59, 59);
-                font-size: 4.2rem;
-                letter-spacing: 3px;
-                text-transform: uppercase;
-                padding: 1rem 0 1rem 0;
-                border-bottom: 5px solid rgb(110, 110, 110);
+            .logo {
+                
+                width: 80%;
+                padding-top: 2rem;
+                
 
                 @media only screen and (max-width: 37.5em) {
                     display: none;
                 }
 
-                span {
-                    color: rgb(202, 202, 202);
-                    text-shadow: -2px -2px 0 rgb(59, 59, 59), 2px -2px 0 rgb(59, 59, 59), -2px 2px 0 rgb(59, 59, 59), 2px 2px 0 rgb(59, 59, 59);
-                }
+                
             }
 
             .grid {
