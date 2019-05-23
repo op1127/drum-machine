@@ -73,20 +73,12 @@ body {
       @media only screen and (max-width: 37.5em) {
         .machine__container--left {
           order: 2; } }
-      .machine__container--left h1 {
-        font-family: Orbitron, sans-serif;
-        color: #3b3b3b;
-        font-size: 4.2rem;
-        letter-spacing: 3px;
-        text-transform: uppercase;
-        padding: 1rem 0 1rem 0;
-        border-bottom: 5px solid #6e6e6e; }
+      .machine__container--left .logo {
+        width: 80%;
+        padding-top: 2rem; }
         @media only screen and (max-width: 37.5em) {
-          .machine__container--left h1 {
+          .machine__container--left .logo {
             display: none; } }
-        .machine__container--left h1 span {
-          color: #cacaca;
-          text-shadow: -2px -2px 0 #3b3b3b, 2px -2px 0 #3b3b3b, -2px 2px 0 #3b3b3b, 2px 2px 0 #3b3b3b; }
       .machine__container--left .grid {
         width: max-content;
         height: max-content;
