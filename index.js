@@ -1,3 +1,4 @@
+// Object which contains pad value, animation color, and sound
 var drumKit = {
     z: {
         pad: 'z',
@@ -129,7 +130,7 @@ var drumKit = {
     }
 }
 
-
+// Music
 var song = {
     sound: new Howl({
         src: ['sounds/songs/future-rnb.wav'],
@@ -140,17 +141,19 @@ var song = {
     }),
 }
 
+// Array to push animation shapes into
 var shapes = [];
-
 var rotateNum;
 
+// State variables for playback and looping
 var playback = false;
-
 var loop = false;
 
+// State variables for music volume
 var songVolume = 1.0;
 var numVolume = 10;
 
+// Play music
 document.querySelector(".transport__play").addEventListener("click", function () {
     if (!playback) {
         song.sound.play();
@@ -161,11 +164,13 @@ document.querySelector(".transport__play").addEventListener("click", function ()
     }
 });
 
+// Stop music
 document.querySelector(".transport__stop").addEventListener("click", function () {
     song.sound.stop();
     playback = false;
 });
 
+// Loop music
 document.querySelector(".transport__loop").addEventListener("click", function () {
     loop = loop ? false : true;
     song.sound.loop(loop);
@@ -173,7 +178,7 @@ document.querySelector(".transport__loop").addEventListener("click", function ()
     el.classList.toggle('invisible');
 });
 
-
+// Raise volume
 document.querySelector(".transport__volume-up").addEventListener("click", function () {
     if (songVolume < 1.0) {
         songVolume += .1;
@@ -183,6 +188,7 @@ document.querySelector(".transport__volume-up").addEventListener("click", functi
     }
 });
 
+// Lower volume
 document.querySelector(".transport__volume-down").addEventListener("click", function () {
     if (songVolume > 0.1) {
         songVolume -= .1;
@@ -200,6 +206,7 @@ document.querySelector(".grid").addEventListener("mousedown", function (event) {
     }
 });
 
+// Calls resetColor below to reset pad color back to white
 document.querySelector(".grid").addEventListener("mouseup", function (event) {
     if (event.target && event.target.matches("div.grid__item")) {
         var key = event.target.innerText.toLowerCase();
@@ -214,6 +221,7 @@ document.querySelector(".grid").addEventListener("mouseout", function (event) {
     }
 });
 
+// Event listener for drum pad/touch devices
 document.querySelector(".grid").addEventListener("touchstart", function (event) {
     if (event.target && event.target.matches("div.grid__item")) {
         var key = event.target.innerText.toLowerCase();
@@ -222,6 +230,7 @@ document.querySelector(".grid").addEventListener("touchstart", function (event) 
     }
 });
 
+// Resets color
 document.querySelector(".grid").addEventListener("touchend", function (event) {
     if (event.target && event.target.matches("div.grid__item")) {
         var key = event.target.innerText.toLowerCase();
@@ -238,12 +247,14 @@ function onKeyDown(event) {
     }
 }
 
+// Event listener for each key release. Calls the resetColor function below
 function onKeyUp(event) {
     if (drumKit[event.key]) {
         resetColor(drumKit[event.key].pad)
     }
 }
 
+// Called by the triggerPad function below
 function changeColor(key, color) {
     var padClass = ".pad-" + key;
     var el = document.querySelector(padClass);
@@ -261,7 +272,7 @@ function resetColor(key) {
     el.style.transform = 'scale(1)';
 }
 
-// By using the integer value oobove, we can access each kit by passing ito the drumKitay of objects. 
+// By using the letter/integer value of each drum pad, we can access each kit by passing it into  the drumKit object at the very top. 
 function triggerPad(event) {
     var maxPoint = new Point(view.size.width, view.size.height);
     var randomPoint = Point.random();
@@ -269,6 +280,7 @@ function triggerPad(event) {
     var num = Math.floor(Math.random() * 3);
     var newShape;
 
+    // Determines a the shape using the random num
     if (num === 0) {
         newShape = new Path.Circle(point, 550);
     } else if (num === 1) {
@@ -286,6 +298,7 @@ function triggerPad(event) {
 
 }
 
+// Paper js animations
 function onFrame() {
     for (var i = 0; i < shapes.length; i++) {
         shapes[i].scale(0.9);
