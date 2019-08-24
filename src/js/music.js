@@ -129,7 +129,7 @@ export var drumKit = {
         })
     }
 }
- 
+
 export var song = {
     sound: new Howl({
         src: ['sounds/songs/future-rnb.wav'],
@@ -139,3 +139,4 @@ export var song = {
         }
     }),
 }
+

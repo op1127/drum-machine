@@ -1,6 +1,5 @@
 import paper from 'paper';
-import howler from 'howler';
-import {drumKit} from './music'
+import { drumKit } from './music'
 
 paper.install(window);
 

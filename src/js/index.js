@@ -1,6 +1,6 @@
 import '../sass/main.scss';
 
-import howler from 'howler';
+import 'howler';
 import  { drumKit, song } from './music';
 import { triggerPad, resetColor } from './animations';
 
@@ -12,6 +12,12 @@ var loop = false;
 // State variables for music volume
 var songVolume = 1.0;
 var numVolume = 10;
+
+// IE matches polyfill
+if (!Element.prototype.matches) {
+    Element.prototype.matches = Element.prototype.msMatchesSelector ||
+                                Element.prototype.webkitMatchesSelector;
+  }
 
 // Play music
 document.querySelector(".transport__play").addEventListener("click", function () {
@@ -113,3 +119,5 @@ tool.onKeyUp = function (event) {
         resetColor(drumKit[event.key].pad)
     }
 }
+
+
