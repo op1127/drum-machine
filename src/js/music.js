@@ -6,7 +6,7 @@ import {
 export var drumKit = {
     z: {
         pad: 'z',
-        color: '#1a1c2c',
+        color: '#007EA7',
         sound: new Howl({
             src: ['sounds/kit/Kick.mp3'],
             volume: 1.0
@@ -14,7 +14,7 @@ export var drumKit = {
     },
     x: {
         pad: 'x',
-        color: '#572956',
+        color: '#007398 ',
         sound: new Howl({
             src: ['sounds/kit/Snare.mp3'],
             volume: 1.0
@@ -22,7 +22,7 @@ export var drumKit = {
     },
     c: {
         pad: 'c',
-        color: '#b14156',
+        color: '#006889',
         sound: new Howl({
             src: ['sounds/kit/Hihat.mp3'],
             volume: 1.0
@@ -30,7 +30,7 @@ export var drumKit = {
     },
     v: {
         pad: 'v',
-        color: '#ee7b58',
+        color: '#005C7A',
         sound: new Howl({
             src: ['sounds/kit/Hihat2.mp3'],
             volume: 1.0
@@ -38,7 +38,7 @@ export var drumKit = {
     },
     a: {
         pad: 'a',
-        color: '#ffd079',
+        color: '#B80204',
         sound: new Howl({
             src: ['sounds/kit/Kick2.mp3'],
             volume: 1.0
@@ -46,7 +46,7 @@ export var drumKit = {
     },
     s: {
         pad: 's',
-        color: '#a0f072',
+        color: '#BE191A',
         sound: new Howl({
             src: ['sounds/kit/Clap.mp3'],
             volume: 1.0
@@ -54,7 +54,7 @@ export var drumKit = {
     },
     d: {
         pad: 'd',
-        color: '#38b86e',
+        color: '#B80204',
         sound: new Howl({
             src: ['sounds/kit/Rim.mp3'],
             volume: 1.0
@@ -62,7 +62,7 @@ export var drumKit = {
     },
     f: {
         pad: 'f',
-        color: '#276e7b',
+        color: '#A80204',
         sound: new Howl({
             src: ['sounds/kit/Snare2.mp3'],
             volume: 1.0
@@ -70,7 +70,7 @@ export var drumKit = {
     },
     q: {
         pad: 'q',
-        color: '#726da8',
+        color: '#6369D1',
         sound: new Howl({
             src: ['sounds/kit/Kick3.mp3'],
             volume: 1.0
@@ -78,7 +78,7 @@ export var drumKit = {
     },
     w: {
         pad: 'w',
-        color: '#7d8cc4',
+        color: '#5A60BE',
         sound: new Howl({
             src: ['sounds/kit/Shaker.mp3'],
             volume: 1.0
@@ -86,7 +86,7 @@ export var drumKit = {
     },
     e: {
         pad: 'e',
-        color: '#a0d2db',
+        color: '#5256AC',
         sound: new Howl({
             src: ['sounds/kit/Clave.mp3'],
             volume: 1.0
@@ -94,7 +94,7 @@ export var drumKit = {
     },
     r: {
         pad: 'r',
-        color: '#bee7e8',
+        color: '#494D99',
         sound: new Howl({
             src: ['sounds/kit/Cowbell.mp3'],
             volume: 1.0
@@ -102,7 +102,7 @@ export var drumKit = {
     },
     1: {
         pad: '1',
-        color: '#f08700',
+        color: '#4BB3FD',
         sound: new Howl({
             src: ['sounds/kit/Conga1.mp3'],
             volume: 1.0
@@ -110,7 +110,7 @@ export var drumKit = {
     },
     2: {
         pad: '2',
-        color: '#f49f0a',
+        color: '#45A3E6',
         sound: new Howl({
             src: ['sounds/kit/Conga2.mp3'],
             volume: 1.0
@@ -118,7 +118,7 @@ export var drumKit = {
     },
     3: {
         pad: '3',
-        color: '#efca08',
+        color: '#3E93D0',
         sound: new Howl({
             src: ['sounds/kit/Conga3.mp3'],
             volume: 1.0
@@ -126,7 +126,7 @@ export var drumKit = {
     },
     4: {
         pad: '4',
-        color: '#00a6a6',
+        color: '#3783B9',
         sound: new Howl({
             src: ['sounds/kit/Cymbal.mp3'],
             volume: 1.0
