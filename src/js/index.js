@@ -1,8 +1,14 @@
 import '../sass/main.scss';
 
 import 'howler';
-import  { drumKit, song } from './music';
-import { triggerPad, resetColor } from './animations';
+import {
+    drumKit,
+    song
+} from './music';
+import {
+    triggerPad,
+    resetColor
+} from './animations';
 
 
 // State variables for playback and looping
@@ -16,24 +22,35 @@ var numVolume = 10;
 // IE matches polyfill
 if (!Element.prototype.matches) {
     Element.prototype.matches = Element.prototype.msMatchesSelector ||
-                                Element.prototype.webkitMatchesSelector;
-  }
+        Element.prototype.webkitMatchesSelector;
+}
+
+export function setPlayback(bool) {
+    playback = bool;
+}
+
+function setKitVolume(vol) {
+    for (var prop in drumKit) {
+        drumKit[prop].sound.volume(vol);
+    }
+}
 
 // Play music
 document.querySelector(".transport__play").addEventListener("click", function () {
     if (!playback) {
         song.sound.play();
-        playback = true;
+        setPlayback(true);
     } else {
         song.sound.pause();
-        playback = false;
+        setPlayback(false)
     }
+
 });
 
 // Stop music
 document.querySelector(".transport__stop").addEventListener("click", function () {
     song.sound.stop();
-    playback = false;
+    setPlayback(false)
 });
 
 // Loop music
@@ -50,6 +67,7 @@ document.querySelector(".transport__volume-up").addEventListener("click", functi
         songVolume += .1;
         numVolume += 1;
         song.sound.volume(songVolume);
+        setKitVolume(songVolume);
         document.querySelector('#volume').textContent = numVolume;
     }
 });
@@ -60,6 +78,7 @@ document.querySelector(".transport__volume-down").addEventListener("click", func
         songVolume -= .1;
         numVolume -= 1;
         song.sound.volume(songVolume);
+        setKitVolume(songVolume);
         document.querySelector('#volume').textContent = numVolume;
     }
 });
@@ -119,5 +138,3 @@ tool.onKeyUp = function (event) {
         resetColor(drumKit[event.key].pad)
     }
 }
-
-

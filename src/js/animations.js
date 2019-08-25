@@ -1,5 +1,7 @@
 import paper from 'paper';
-import { drumKit } from './music'
+import {
+    drumKit
+} from './music'
 
 paper.install(window);
 
@@ -19,7 +21,6 @@ function changeColor(key, color) {
     el.style.backgroundColor = color;
     el.style.color = color;
     el.style.transform = 'scale(.94)';
-    document.querySelector('.signature').style.color = color;
 }
 
 export function resetColor(key) {
@@ -70,4 +71,3 @@ view.onFrame = function () {
         }
     }
 }
-
