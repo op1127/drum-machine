@@ -136,7 +136,7 @@ export var drumKit = {
 
 export var song = {
     sound: new Howl({
-        src: ['sounds/songs/future-rnb.mp3'],
+        src: ['sounds/songs/hype.mp3'],
         volume: 1.0,
         onend: function () {
             setPlayback(false);

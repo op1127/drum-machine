@@ -27,11 +27,28 @@ if (!Element.prototype.matches) {
 
 export function setPlayback(bool) {
     playback = bool;
+    var playBackIcon = document.querySelector('.play-back');
+    !bool? playBackIcon.setAttribute('src', './img/play.svg') : playBackIcon.setAttribute('src', './img/pause.svg');
 }
 
 function setKitVolume(vol) {
     for (var prop in drumKit) {
         drumKit[prop].sound.volume(vol);
+    }
+    document.querySelector('.vol__num').textContent = vol > 0.9 ? numVolume : `0${numVolume}`;
+    var volIcon = document.querySelector('.vol__icon');
+
+    if (vol > 0.8) {
+        volIcon.setAttribute('src', './img/vol-hi.svg');
+
+    } else if (vol < 0.8 && vol > 0.5) {
+        volIcon.setAttribute('src', './img/vol-med.svg');
+
+    } else if (vol < 0.5 && vol > 0.2) {
+        volIcon.setAttribute('src', './img/vol-lo.svg');
+
+    } else if (vol < 0.1){
+        volIcon.setAttribute('src', './img/vol-none.svg');
     }
 }
 
@@ -57,7 +74,7 @@ document.querySelector(".transport__stop").addEventListener("click", function ()
 document.querySelector(".transport__loop").addEventListener("click", function () {
     loop = loop ? false : true;
     song.sound.loop(loop);
-    var el = document.querySelector("#loop");
+    var el = document.querySelector(".loop");
     el.classList.toggle('invisible');
 });
 
@@ -68,7 +85,6 @@ document.querySelector(".transport__volume-up").addEventListener("click", functi
         numVolume += 1;
         song.sound.volume(songVolume);
         setKitVolume(songVolume);
-        document.querySelector('#volume').textContent = numVolume;
     }
 });
 
@@ -79,7 +95,6 @@ document.querySelector(".transport__volume-down").addEventListener("click", func
         numVolume -= 1;
         song.sound.volume(songVolume);
         setKitVolume(songVolume);
-        document.querySelector('#volume').textContent = numVolume;
     }
 });
 

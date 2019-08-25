@@ -22,6 +22,7 @@
         display: flex;
         padding: 3rem 5rem;
         justify-content: space-between;
+
         @media only screen and (max-width: 37.5em) {
             flex-direction: column;
             justify-content: center;
@@ -37,70 +38,10 @@
             justify-content: space-between;
             align-items: center;
             text-align: center;
+
             @media only screen and (max-width: 37.5em) {
                 order: 2;
                 margin: 0;
-            }
-
-            .logo {
-                
-                width: auto;
-                height: 4rem;
-                
-                
-
-                @media only screen and (max-width: 37.5em) {
-                    display: none;
-                }
-
-                
-            }
-
-            .grid {
-                width: 45rem;
-                height: 45rem;
-
-                justify-content: center;
-                background-color: rgb(182, 182, 182);
-
-                display: flex;
-                flex-wrap: wrap;
-                align-content: center;
-                padding: 2rem;
-                border-radius: 3px;
-
-                @media only screen and (max-width: 37.5em) {
-                    width: 90vw;
-                    height: 60vh;
-                    
-                }
-
-
-                &__item {
-                    width: 9rem;
-                    height: 9rem;
-                    font-family: 'Roboto', sans-serif;
-                    font-size: 1.5rem;
-                    text-transform: uppercase;
-                    color: rgb(110, 110, 110);
-                    font-weight: 700;
-
-                    margin: .5rem;
-                    background-color: rgb(238, 238, 238);
-                    border-radius: 3px;
-                    border: 3px solid rgb(110, 110, 110);
-                    text-align: left;
-                    padding-left: .5rem;
-                    padding-top: .2rem;
-                    cursor: pointer;
-
-                    @media only screen and (max-width: 37.5em) {
-                        font-size: 2rem;
-                        width: 25%;
-                        height: 25%;
-                        margin: 0;
-                    }
-                }
             }
         }
 
@@ -116,142 +57,216 @@
                 order: 1;
                 align-items: center;
             }
-
-            .screen {
-                width: 36.7rem;
-                height: 10rem;
-                font-family: 'Roboto', sans-serif;
-                font-size: 2rem;
-                text-transform: uppercase;
-
-                border-left: 3rem solid rgb(59, 59, 59);
-                border-right: 3rem solid rgb(59, 59, 59);
-                border-top: 2rem solid rgb(59, 59, 59);
-                border-bottom: 2rem solid rgb(59, 59, 59);
-                border-radius: 3px;
-                background-color: rgb(238, 238, 238);
-                padding: 0 2rem;
-
-                display: flex;
-                justify-content: space-around;
-                align-items: center; 
-
-                img {
-                    width: 2rem;
-                    height: 2rem;
-                }
-
-                @media only screen and (max-width: 37.5em) {
-                    width: 90vw;
-                    height: 14rem;
-                    font-size: 4.5rem;
-
-                    img {
-                        width: 5rem;
-                        height: 5rem;
-                    }
-                }
-            }
-
-            .instructions {
-                width: 36.7rem;
-                height: 25rem;
-                background-color: rgb(182, 182, 182);
-                border-radius: 3px;
-
-                font-family: 'Roboto', sans-serif;
-                color: rgb(59, 59, 59);
-                font-size: 1.6rem;
-                text-transform: uppercase;
-                font-weight: 500;
-                
-                padding: 1rem 4rem;
-                line-height: 3rem;
-
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                
-
-                .signature {
-                    text-transform: none;
-                }
-
-                h2 {
-                    text-decoration: underline;
-                    letter-spacing: 1px;
-                }
-
-                :not(:last-child) {
-                    @media only screen and (max-width: 37.5em) {
-                        display: none;
-                        
-                    }
-                }
-
-                @media only screen and (max-width: 37.5em) {
-                    height: 5rem;
-                    width: 90vw;
-                    font-size: 2.5rem;
-                    text-align: center;
-                    background-color: rgb(202, 202, 202);
-                }
-            }
-
-            .transport {
-                width: 36.7rem;
-                height: max-content;
-                background-color: rgb(182, 182, 182);
-
-                display: flex;
-                justify-content: space-between;
-
-                padding-top: 2rem;
-                padding-bottom: 2rem;
-                border-top: 5px solid rgb(110, 110, 110);
-                border-bottom: 5px solid rgb(110, 110, 110);
-
-                @media only screen and (max-width: 37.5em) {
-                    width: 90vw;
-                    border: none;
-                    padding-bottom: 0;
-                }
-
-                .btn {
-                    height: 3rem;
-                    width: 6.5rem;
-                    font-family: 'Roboto', sans-serif;
-                    font-size: 1.3rem;
-                    text-transform: uppercase;
-                    color: rgb(110, 110, 110);
-                    font-weight: 500;
-                    padding-left: 3px;
-
-                    border-radius: 3px;
-                    border: 3px solid rgb(110, 110, 110);
-                    background-color: rgb(221, 221, 221);
-                    cursor: pointer;
-
-                    @media only screen and (max-width: 37.5em) {
-                        height: 8rem;
-                        width: 13rem;
-                        font-size: 3rem;
-                        padding-left: 1px;
-                    }
-                }
-
-                .btn:active {
-                    transform: scale(.95);
-
-                }
-            }
         }
     }
 }
 
-.btn-loop {
-    color: orangered !important;
+.logo {
+
+    width: auto;
+    height: 4rem;
+
+
+
+    @media only screen and (max-width: 37.5em) {
+        display: none;
+    }
+
+
 }
+
+.grid {
+    width: 45rem;
+    height: 45rem;
+
+    justify-content: center;
+    background-color: rgb(182, 182, 182);
+
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    padding: 2rem;
+    border-radius: 3px;
+
+    @media only screen and (max-width: 37.5em) {
+        width: 90vw;
+        height: 60vh;
+
+    }
+
+
+    &__item {
+        width: 9rem;
+        height: 9rem;
+        font-family: 'Roboto', sans-serif;
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: rgb(110, 110, 110);
+        font-weight: 700;
+
+        margin: .5rem;
+        background-color: rgb(238, 238, 238);
+        border-radius: 3px;
+        border: 3px solid rgb(110, 110, 110);
+        text-align: left;
+        padding-left: .5rem;
+        padding-top: .2rem;
+        cursor: pointer;
+
+        @media only screen and (max-width: 37.5em) {
+            font-size: 2rem;
+            width: 25%;
+            height: 25%;
+            margin: 0;
+        }
+    }
+}
+
+.screen {
+    width: 36.7rem;
+    height: 10rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 2rem;
+    text-transform: uppercase;
+
+    border-left: 3rem solid rgb(59, 59, 59);
+    border-right: 3rem solid rgb(59, 59, 59);
+    border-top: 2rem solid rgb(59, 59, 59);
+    border-bottom: 2rem solid rgb(59, 59, 59);
+    border-radius: 3px;
+    background-color: rgb(238, 238, 238);
+    padding: 0 2rem;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    img {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    @media only screen and (max-width: 37.5em) {
+        width: 90vw;
+        height: 14rem;
+        font-size: 4.5rem;
+
+        img {
+            width: 5rem;
+            height: 5rem;
+        }
+    }
+}
+
+.instructions {
+    width: 36.7rem;
+    height: 25rem;
+    background-color: rgb(182, 182, 182);
+    border-radius: 3px;
+
+    font-family: 'Roboto', sans-serif;
+    color: rgb(59, 59, 59);
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-weight: 500;
+
+    padding: 1rem 4rem;
+    line-height: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+
+    .signature {
+        text-transform: none;
+    }
+
+    h2 {
+        text-decoration: underline;
+        letter-spacing: 1px;
+    }
+
+    :not(:last-child) {
+        @media only screen and (max-width: 37.5em) {
+            display: none;
+
+        }
+    }
+
+    @media only screen and (max-width: 37.5em) {
+        height: 5rem;
+        width: 90vw;
+        font-size: 2.5rem;
+        text-align: center;
+        background-color: rgb(202, 202, 202);
+    }
+}
+
+.transport {
+    width: 36.7rem;
+    height: max-content;
+    background-color: rgb(182, 182, 182);
+
+    display: flex;
+    justify-content: space-between;
+
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-top: 5px solid rgb(110, 110, 110);
+    border-bottom: 5px solid rgb(110, 110, 110);
+    
+
+    @media only screen and (max-width: 37.5em) {
+        width: 90vw;
+        border: none;
+        padding-bottom: 0;
+    }
+}
+
+.vol {
+
+    display: flex;
+    align-items: center;
+
+    &__icon {
+
+    }
+
+    &__num {
+        margin-left: 1rem;
+        color: rgb(59, 59, 59);
+        font-size: 1.8rem;
+    }
+}
+
+.btn {
+    height: 3rem;
+    width: 6.5rem;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    color: rgb(110, 110, 110);
+    font-weight: 500;
+    padding-left: 3px;
+
+    border-radius: 3px;
+    border: 3px solid rgb(110, 110, 110);
+    background-color: rgb(221, 221, 221);
+    cursor: pointer;
+
+    @media only screen and (max-width: 37.5em) {
+        height: 8rem;
+        width: 13rem;
+        font-size: 3rem;
+        padding-left: 1px;
+    }
+
+    &:active {
+        transform: scale(.95);
+    }
+}
+
 
 .invisible {
     visibility: hidden;
