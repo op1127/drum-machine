@@ -2,6 +2,19 @@
 <html lang="en">
 
 <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-140707175-2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-140707175-2');
+    </script>
+
     <meta charset="UTF-8">
     <meta name="description" content="An interactive online drum machine. See if you can play along to the beat!">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +23,12 @@
     <!--<script script type="text/javascript" src="node_modules/paper/dist/paper-full.js"></script> -->
     <!-- <script type="text/javascript" src="node_modules/howler/dist/howler.js"></script> -->
     <!--<script type="text/paperscript" canvas="myCanvas" src="index.js"></script> -->
-    <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Roboto:500" rel="stylesheet">
 </head>
 
 <body>
     <canvas id="myCanvas" resize></canvas>
-    
+
     <div class="machine">
         <div class="machine__container">
             <div class="machine__container--left">
@@ -46,10 +59,11 @@
                     <img class="play-back" src="./img/play.svg"></img>
                     <img class="invisible loop" src="./img/loop.svg"></img>
                     <div class="vol">
-                        <img class="vol__icon" src="./img/vol-hi.svg"><p><span class="vol__num">10</span></p></img>
+                        <img class="vol__icon" src="./img/vol-hi.svg">
+                        <p><span class="vol__num">10</span></p></img>
                     </div>
-                    
-                    
+
+
                 </div>
 
                 <div class="transport">
@@ -62,9 +76,11 @@
 
                 <div class="instructions">
                     <h2>User Manual</h2>
-                    <p>The square pads each trigger a different sound. Click the Play button above to start the music and use your keyboard to play along with the beat!
+                    <p>The square pads each trigger a different drum sound. Press the Play button above to start the
+                        music and use your keyboard to play along to the beat!
                     </p>
-                    <p class="signature">&copy; 2019 || Created by <a href="http://www.omarap.com" >Omar Plasencia</a></p>
+                    <p class="signature">&copy; 2019 || Created by <a href="http://www.omarap.com">Omar Plasencia</a>
+                    </p>
 
                 </div>
 

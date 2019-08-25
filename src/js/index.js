@@ -13,7 +13,7 @@ import {
 
 // State variables for playback and looping
 var playback = false;
-var loop = false;
+export var loop = false;
 
 // State variables for music volume
 var songVolume = 1.0;

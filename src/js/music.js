@@ -1,5 +1,6 @@
 import {
-    setPlayback
+    setPlayback,
+    loop
 } from './index';
 
 // Object which contains pad value, animation color, and sound
@@ -139,7 +140,9 @@ export var song = {
         src: ['sounds/songs/hype.mp3'],
         volume: 1.0,
         onend: function () {
-            setPlayback(false);
+            if (!loop) {
+                setPlayback(false);
+            }
         }
     }),
 }
