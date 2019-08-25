@@ -64,7 +64,7 @@ view.onFrame = function () {
     for (var i = 0; i < shapes.length; i++) {
         shapes[i].scale(0.9);
         shapes[i].rotate(rotateNum);
-        shapes[i].strokeColor.hue += 1;
+        
         if (shapes[i].area < 1) {
             shapes[i].remove(); // remove the shape from the canvas
             shapes.splice(i, 1); // remove the shape from the array
