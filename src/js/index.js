@@ -25,6 +25,11 @@ if (!Element.prototype.matches) {
         Element.prototype.webkitMatchesSelector;
 }
 
+
+var date = new Date();
+var year = date.getFullYear();
+document.querySelector(".date-year").innerText = year;
+
 export function setPlayback(bool) {
     playback = bool;
     var playBackIcon = document.querySelector('.play-back');
