@@ -75,7 +75,7 @@ document.querySelector(".transport__loop").addEventListener("click", function ()
     loop = loop ? false : true;
     song.sound.loop(loop);
     var el = document.querySelector(".loop");
-    el.classList.toggle('invisible');
+    !loop ? el.setAttribute('src', './img/loop-outline.svg') : el.setAttribute('src', './img/loop.svg');
 });
 
 // Raise volume

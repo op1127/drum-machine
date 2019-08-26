@@ -229,10 +229,6 @@
     display: flex;
     align-items: center;
 
-    &__icon {
-
-    }
-
     &__num {
         margin-left: .4rem;
         color: rgb(59, 59, 59);
@@ -279,9 +275,4 @@
     &:active {
         transform: scale(.95);
     }
-}
-
-
-.invisible {
-    visibility: hidden;
 }
